@@ -11,6 +11,9 @@
  email: "john@somedomain.com", // String
  active: 1 // Int (0,1)
  }*/
+
+"use strict";
+
 define(["common/helper"], function (helper) {
 
     var Customer = function (firstName, middleName, lastName, dob, email, city, active) {

@@ -1,3 +1,5 @@
+"use strict";
+
 define([ "model/customer", "controller/customer" , "view/main" , "service/customer"],
     function (Customer, customerController, mainView, customerService) {
         return {

@@ -1,3 +1,5 @@
+"use strict";
+
 define(['service/logger'],
     function (logger) {
         var storage = localStorage;

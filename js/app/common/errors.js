@@ -1,3 +1,5 @@
+"use strict";
+
 define(function () {
     var errorLvl = {
         high: 100,

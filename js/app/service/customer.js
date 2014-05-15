@@ -1,6 +1,7 @@
 /**
  * Created by Administrator on 5/14/2014.
  */
+"use strict";
 define(["model/customer",
         "service/storage",
         "common/errors",
