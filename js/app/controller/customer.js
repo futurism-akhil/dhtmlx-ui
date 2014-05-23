@@ -89,7 +89,7 @@ define(["view/main", "model/customer",
                 var grid = customerListView.getGrid();
                 var row = grid.getSelected();
                 if (!row) {
-                    alert('Please select row to delete');
+                    alert('Please select row..');
                     return;
                 }
                 var customerId = row.split('^')[1] || 0;
