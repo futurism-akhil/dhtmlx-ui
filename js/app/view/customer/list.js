@@ -28,14 +28,14 @@ define(["view/main",
                     grid = tab.attachGrid();
 
                     grid.enableMultiselect(true);
-                    grid.setHeader(['First Name', 'Middle Name', 'Last Name', 'City', 'DoB', 'Email', 'Active']);
+                    grid.setHeader(['ID','First Name', 'Middle Name', 'Last Name', 'City', 'DoB', 'Email', 'Active']);
                     grid.enableMultiselect(true);
-                    grid.setColTypes("ro,ro,ro,ro,ro,ro,ro");
+                    grid.setColTypes("ro,ro,ro,ro,ro,ro,ro,ro");
                     grid.enableMultiselect(false);
 
                     grid.setColSorting('str,str');
                     grid.enableCellIds(true);
-                    grid.setColumnIds('col_firstnm', 'col_city', 'col_3', 'col_4', 'col_5', 'col_6', 'col_7');
+                    grid.setColumnIds('col_id,col_firstnm', 'col_city', 'col_3', 'col_4', 'col_5', 'col_6', 'col_7');
                     grid.setIconPath(config.gridIconPath);
                     grid.setImagePath(config.gridIconPath);
 
