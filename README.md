@@ -7,5 +7,5 @@ This is a sample project to implement MVC with DHTMLX components.
  
  * DHTMLX components
  * RequireJs
- * lowdash
+ * Lo-Dash
  * famfam icons
