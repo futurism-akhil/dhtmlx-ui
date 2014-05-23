@@ -14,15 +14,15 @@
 
 "use strict";
 
-define(["common/helper"], function (helper) {
+define(["common/helper", 'common/errors'], function (helper, errors) {
 
     var Customer = function (firstName, middleName, lastName, dob, email, city, active) {
-        // this.id = id;
+        this.id = undefined;
         this.firstName = firstName;
-        this.city = city;
         this.middleName = middleName;
         this.lastName = lastName;
-        this.dob = helper.setDateFormat(dob);
+        this.city = city;
+        this.dob = dob ? helper.setDateFormat(dob) : undefined;
         this.email = email;
         this.active = active;
 
@@ -40,6 +40,21 @@ define(["common/helper"], function (helper) {
 
             return fName.toUpperCase() + ' ' + mName + ' ' + lName;
         }
+    };
+
+    // adding static builders
+    Customer.buildCustomer = function (obj) {
+        if (!obj) {
+            throw errors.invalidType("Invalid data type found");
+        }
+        var customerObj = new Customer();
+        var objKeys = _.keys(customerObj);
+        _.each(objKeys, function (k) {
+            if (obj.hasOwnProperty(k)) {
+                customerObj[k] = obj[k];
+            }
+        });
+        return customerObj;
     };
 
     return Customer;

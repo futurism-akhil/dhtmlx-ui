@@ -12,10 +12,10 @@ define(['../../config', 'common/helper'],
 
         return {
             debug: function (msg) {
-                if (logLvl >= 1)  console.log(common.formatMsg(msg));
+                if (logLvl <= 1)  console.log(common.formatMsg(msg));
             },
             error: function (msg) {
-                if (logLvl >= 3)  console.error(common.formatMsg(msg));
+                if (logLvl <= 3)  console.error(common.formatMsg(msg));
             }
         }
 

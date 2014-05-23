@@ -12,7 +12,7 @@ define(['service/logger'],
             read: function (key) {
                 var data = storage.getItem(key);
                 logger.debug('Reading ' + key + ' from local storage');
-                return (data) ? JSON.parse(data) : [];
+                return (data) ? JSON.parse(data) : {maxId: 0, data: []};
             },
             clear: function () {
                 storage.clear();

@@ -1,6 +1,9 @@
 "use strict";
 
-define(function () {
+define(['service/logger'], function (logger) {
+
+    logger.debug('Common error module has initialized');
+
     var errorLvl = {
         high: 100,
         medium: 50,
